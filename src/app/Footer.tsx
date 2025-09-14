@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Contacts = () => {
   return (
     <div className="w-full md:w-1/3">
@@ -12,9 +14,11 @@ const Contacts = () => {
 const Logo = () => {
   return (
     <div className="w-full md:w-1/3 flex justify-center items-center">
-      <img
+      <Image
         src="https://techprokat.rv.ua/wp-content/uploads/2021/11/логотип-футер.png"
-        alt=""
+        alt="Логотип Технік"
+        width={256}
+        height={128}
         className="w-64 h-auto" />
     </div>
   );

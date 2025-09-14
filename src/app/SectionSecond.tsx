@@ -5,7 +5,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 
-const NavBlock = ({href, src, alt, width, height}: any) => {
+interface NavBlockProps {
+  href: string;
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+const NavBlock = ({href, src, alt, width, height}: NavBlockProps) => {
     return (
         <div className="w-full md:w-1/2">
             <Link href={href}>
