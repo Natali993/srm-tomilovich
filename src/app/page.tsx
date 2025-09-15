@@ -1,20 +1,25 @@
-import { Footer } from './Footer';
-import { Header } from './Header';
-import { SectionFirst } from './SectionFirst';
-import { SectionSecond } from './SectionSecond';
-import { SectionThree } from './SectionThree';
+import { ProcatBanner } from '../components/ProcatBanner';
+import { Instruments } from '../components/Instruments';
+import { Benefits } from '../components/Benefits';
+import { OurPartners } from '../components/OurPartners';
+import { Questions } from '../components/Questions';
+import { Map } from '../components/Map';
+import { CustomLayout } from '../components/CustomLayout';
+import { ProcatPoslugi } from '@/components/ProcatPoslugi';
+import { RemontDviguniv } from '@/components/RemontDviguniv';
+
 export default function Home() {
   return (
-
-    <div className="flex flex-col min-h-screen font-sans text-gray-700">
-      <Header />
-      <main className="flex-1 p-4 bg-white mt-24">
-        {/* Content sections go here */}
-        <SectionFirst/>
-        <SectionSecond/>
-        <SectionThree/>
-      </main>
-      <Footer />
-    </div>
+    <CustomLayout>
+      {/* Content sections go here */}
+      <ProcatBanner />
+      <ProcatPoslugi />
+      <Instruments />
+      <RemontDviguniv />
+      <Benefits />
+      <OurPartners />
+      <Questions />
+      <Map />
+    </CustomLayout>
   );
 }

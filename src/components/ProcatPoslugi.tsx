@@ -3,17 +3,10 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { CustomTitle } from './Title';
 
 
-interface NavBlockProps {
-  href: string;
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-}
-
-const NavBlock = ({href, src, alt, width, height}: NavBlockProps) => {
+const NavBlock = ({ href, src, alt, width, height }: any) => {
     return (
         <div className="w-full md:w-1/2">
             <Link href={href}>
@@ -31,22 +24,13 @@ const NavBlock = ({href, src, alt, width, height}: NavBlockProps) => {
     )
 }
 
-export const SectionSecond = () => {
+export const ProcatPoslugi = () => {
     return (
-        <div className="py-8">
+        <div className="">
             <div className="container mx-auto px-4">
-
-                <div className="w-full text-center mb-10">
-                    <h1>ПРОКАТ</h1>
-                </div>
-
+                <CustomTitle>ПРОКАТ</CustomTitle>
                 <div className="flex flex-col md:flex-row gap-8">
-
-
                     <NavBlock href={"/prokat"} src={"/section-second-prokat.png"} alt={"Прокат"} width={670} height={865} />
-                    
-
-
                     <div className="w-full md:w-1/2">
                         <Link href="/posluhy">
                             <div className="w-image align_center transition-transform duration-300 hover:scale-105 rounded-lg overflow-hidden shadow-lg">
@@ -60,8 +44,6 @@ export const SectionSecond = () => {
                             </div>
                         </Link>
                     </div>
-
-
                 </div>
             </div>
         </div>

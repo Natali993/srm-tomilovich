@@ -40,11 +40,14 @@ const CategoriesMenu = () => {
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-100 mt-auto py-8">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
+    <footer className="bg-gray-100 mt-auto ">
+      <div className="max-w-[1140px] mx-auto px-4 flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 py-8">
         <Contacts />
         <Logo />
-        <CategoriesMenu/>
+        <CategoriesMenu />
+      </div>
+      <div className="text-center border-2 border-blue-700 text-gray-500 text-sm py-4 border-t">
+        &copy; {new Date().getFullYear()} TechProkat. Всі права захищені.
       </div>
     </footer>
   );

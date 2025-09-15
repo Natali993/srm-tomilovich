@@ -1,15 +1,11 @@
-import Link from "next/link";
-import { Header } from "../Header";
-import { Footer } from "../Footer";
+import { CustomLayout } from "@/components/CustomLayout";
 
-export default function Posluhi() {
+export default function Procat() {
   return (
-
-    <div className="flex bg-white flex-col min-h-screen font-sans text-gray-700">
-      <Header/>
-      Прокат
-      <Link href={"/"}>На головну</Link>
-      <Footer/>
-    </div>
+    <CustomLayout>
+      <div className="flex bg-white flex-col min-h-screen font-sans text-gray-700">
+        Прокат
+      </div>
+    </CustomLayout>
   );
 }

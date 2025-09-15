@@ -1,11 +1,11 @@
-import Link from "next/link";
+import { CustomLayout } from "@/components/CustomLayout";
 
-export default function Posluhi() {
+export default function RemontHonda() {
   return (
-
-    <div className="flex bg-white flex-col min-h-screen font-sans text-gray-700">
-      honda
-      <Link href={"/"}>На головну</Link>
-    </div>
+    <CustomLayout>
+      <div className="flex bg-white flex-col min-h-screen font-sans text-gray-700">
+        Ремонт Honda
+      </div>
+    </CustomLayout>
   );
 }
