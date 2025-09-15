@@ -15,7 +15,7 @@ const Logo = () => {
   return (
     <div className="w-full md:w-1/3 flex justify-center items-center">
       <Image
-        src="https://techprokat.rv.ua/wp-content/uploads/2021/11/логотип-футер.png"
+        src="/techprokat_logo.png"
         alt="Логотип Технік"
         width={256}
         height={128}
