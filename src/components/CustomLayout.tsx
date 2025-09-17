@@ -6,7 +6,7 @@ export const CustomLayout = ({ children }: any) => {
     <div className="flex flex-col min-h-screen bg-white font-sans text-gray-700">
       <DesktopHeader />
       <MobileHeader />
-      <main className="flex-1 max-w-[1140px] mx-auto p-4 mt-[168px]">
+      <main className="flex-1 max-w-[1140px] w-full mx-auto py-4 mt-[168px]">
         {children}
       </main>
       <Footer />
