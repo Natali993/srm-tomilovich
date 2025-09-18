@@ -1,3 +1,5 @@
+import { TOOL_TYPE } from "@/components/toolTypes";
+
 export const collections = [
   {
     imgSrc: "/1.gif",
@@ -6,6 +8,7 @@ export const collections = [
     pricePerHour: "50",
     pricePerDay: "150",
     deposit: "700",
+    type: TOOL_TYPE.ELECTRO,
   },
   {
     imgSrc: "/2.gif",
@@ -14,6 +17,7 @@ export const collections = [
     pricePerHour: "50",
     pricePerDay: "150",
     deposit: "700",
+    type: TOOL_TYPE.ELECTRO,
   },
   {
     imgSrc: "/3.gif",
@@ -22,6 +26,7 @@ export const collections = [
     pricePerHour: "50",
     pricePerDay: "150",
     deposit: "700",
+    type: TOOL_TYPE.ELECTRO,
   },
   {
     imgSrc: "/4.gif",
@@ -30,6 +35,7 @@ export const collections = [
     pricePerHour: "50",
     pricePerDay: "150",
     deposit: "700",
+    type: TOOL_TYPE.BETON,
   },
   {
     imgSrc: "/5.gif",
@@ -38,6 +44,7 @@ export const collections = [
     pricePerHour: "50",
     pricePerDay: "150",
     deposit: "700",
+    type: TOOL_TYPE.BETON,
   },
     {
     imgSrc: "/6.gif",
@@ -46,6 +53,7 @@ export const collections = [
     pricePerHour: "100",
     pricePerDay: "350",
     deposit: "1500",
+    type: TOOL_TYPE.VIBROPLYTU,
   },
     {
     imgSrc: "/7.gif",
@@ -54,6 +62,7 @@ export const collections = [
     pricePerHour: "120",
     pricePerDay: "450",
     deposit: "2500",
+    type: TOOL_TYPE.VIBROPLYTU,
   },
 ];
 
