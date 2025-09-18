@@ -3,7 +3,7 @@ import { CustomLayout } from "@/components/CustomLayout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RmontCard } from "@/components/RmontCard";
 import { TOOL_TYPE } from "@/components/toolTypes";
-import { collections } from "../data/collections";
+import { collections } from "../../data/collections";
 import { useCollectionHref } from "@/hooks/useCollectionHref";
 
 export default function KliningovaTehnika() {

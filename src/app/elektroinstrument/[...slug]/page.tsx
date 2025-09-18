@@ -2,7 +2,7 @@ import Image from "next/image";
 import { CustomLayout } from "@/components/CustomLayout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { notFound } from "next/navigation";
-import { collections } from "@/app/data/collections";
+import { collections } from "@/data/collections";
 
 
 type RmontTwoColProps = {

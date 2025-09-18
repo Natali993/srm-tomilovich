@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { CustomLayout } from "@/components/CustomLayout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { collections } from "../../data/collections";
+import { collections } from "../../../data/collections";
 import { notFound } from "next/navigation";
 
 

@@ -2,7 +2,7 @@
 import { CustomLayout } from "@/components/CustomLayout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RmontCard } from "@/components/RmontCard";
-import { collections } from "../data/collections";
+import { collections } from "../../data/collections";
 import { TOOL_TYPE } from "@/components/toolTypes";
 import { useCollectionHref } from "@/hooks/useCollectionHref";
 

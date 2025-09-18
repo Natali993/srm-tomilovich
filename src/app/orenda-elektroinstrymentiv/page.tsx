@@ -2,7 +2,7 @@
 import { CustomLayout } from "@/components/CustomLayout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RmontCard } from "@/components/RmontCard";
-import { collections } from "../data/collections";
+import { collections } from "../../data/collections";
 import { useCollectionHref } from "@/hooks/useCollectionHref";
 
 export default function OrendaElektroinstrymentiv() {
