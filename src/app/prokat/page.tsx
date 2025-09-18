@@ -5,8 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 export default function OrendaElektroinstrymentiv() {
   return (
-    <CustomLayout>
-      <Breadcrumbs title="Оренда електроінструментів" />
+    <CustomLayout breadcrumbs={()=><Breadcrumbs title="Прокат" />} >
 
       <main className="w-full">
         <div className="max-w-7xl mx-auto px-4">

@@ -1,0 +1,43 @@
+export const collections = [
+  {
+    imgSrc: "/1.gif",
+    title: "Шурупокрут Bosch GSR 1800-Li",
+    href: "/orenda-elektroinstrymentiv/bosch-gsr-1800-li",
+    pricePerHour: "50",
+    pricePerDay: "150",
+    deposit: "700",
+  },
+  {
+    imgSrc: "/3.gif",
+    title: "Шурупокрут Bosch GSB 18-36 V-Li",
+    href: "/orenda-elektroinstrymentiv/bosch-gsb-18-36-v-li",
+    pricePerHour: "50",
+    pricePerDay: "150",
+    deposit: "700",
+  },
+  {
+    imgSrc: "/4.gif",
+    title: "Гайкокрут Bosch GDX 18 V-EC",
+    href: "/orenda-elektroinstrymentiv/bosch-gdx-18-v-ec",
+    pricePerHour: "50",
+    pricePerDay: "150",
+    deposit: "700",
+  },
+  {
+    imgSrc: "/5.gif",
+    title: "Вібратор для бетону 1 м або 1,5 м",
+    href: "/orenda-elektroinstrymentiv/vibrator-dlya-betonu-1m-1-5m",
+    pricePerHour: "50",
+    pricePerDay: "150",
+    deposit: "700",
+  },
+  {
+    imgSrc: "/6.gif",
+    title: "Вібратор для бетону 4,5 м",
+    href: "/orenda-elektroinstrymentiv/vibrator-dlya-betonu-4-5m",
+    pricePerHour: "50",
+    pricePerDay: "150",
+    deposit: "700",
+  },
+];
+
