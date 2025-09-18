@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { CustomLayout } from "@/components/CustomLayout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { collections } from "../../data/collections";
 import { notFound } from "next/navigation";
+import { collections } from "@/app/data/collections";
 
 
 type RmontTwoColProps = {
@@ -80,18 +80,19 @@ type Tool = {
   deposit: string;
 };
 
-export default async function DlaBetonuhRobit({
+export default async function OrendaElektroinstrymentiv({
   params,
 }: {
   params: Promise<{ slug: string[] }>;
 }) {
-  const paramsReady = await params;
+  const paramsReady = await params;  
   const slug = decodeURIComponent(paramsReady.slug.at(-1) || "");
 
   const normalize = (s: string) => s.toLowerCase().replace(/^\/+|\/+$/g, "");
 
-  const found = collections.find((item) => {
-    return normalize(item.slug) === normalize(slug);
+  const found = collections.find((item: Tool) => {
+    const hrefLast = (normalize(item.slug) || "").split("/").at(-1) || "";
+    return hrefLast === normalize(slug);
   });
 
   if (!found) return notFound();
@@ -99,7 +100,7 @@ export default async function DlaBetonuhRobit({
   const { imgSrc, title, pricePerHour, pricePerDay, deposit } = found;
 
   return (
-    <CustomLayout breadcrumbs={() => <Breadcrumbs title={title} fromTitle="Для бетонних робіт" fromUrl="/dla-betonuh-robit"  />}>
+    <CustomLayout breadcrumbs={() => <Breadcrumbs title={title} fromTitle="Віброплити" fromUrl="/vibriplutu"  />}>
       <RmontTwoCol
         imgSrc={imgSrc}
         title={title}

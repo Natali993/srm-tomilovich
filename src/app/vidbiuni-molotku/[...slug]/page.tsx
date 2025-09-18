@@ -80,7 +80,7 @@ type Tool = {
   deposit: string;
 };
 
-export default async function DlaBetonuhRobit({
+export default async function VidbiynMolotku({
   params,
 }: {
   params: Promise<{ slug: string[] }>;
@@ -99,7 +99,7 @@ export default async function DlaBetonuhRobit({
   const { imgSrc, title, pricePerHour, pricePerDay, deposit } = found;
 
   return (
-    <CustomLayout breadcrumbs={() => <Breadcrumbs title={title} fromTitle="Для бетонних робіт" fromUrl="/dla-betonuh-robit"  />}>
+    <CustomLayout breadcrumbs={() => <Breadcrumbs title={title} fromTitle="Відбійники молотки" fromUrl="/vidbiuni-molotku"  />}>
       <RmontTwoCol
         imgSrc={imgSrc}
         title={title}

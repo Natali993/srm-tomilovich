@@ -2,16 +2,18 @@
 import { CustomLayout } from "@/components/CustomLayout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RmontCard } from "@/components/RmontCard";
+import { TOOL_TYPE } from "@/components/toolTypes";
 import { collections } from "../data/collections";
 import { useCollectionHref } from "@/hooks/useCollectionHref";
 
-export default function OrendaElektroinstrymentiv() {
+export default function VidbiynMolotku() {
   const { generateHref } = useCollectionHref();
+  const elektroinstrumentItems = collections.filter(item => item.type === TOOL_TYPE.VIDBIYNI_MOLOT);
 
   return (
-    <CustomLayout breadcrumbs={()=><Breadcrumbs title="Оренда електроінструментів" />} >
+    <CustomLayout breadcrumbs={()=><Breadcrumbs title="Відбійні молотки" />} >
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-        {collections.map(({imgSrc, title, slug }, index) => (
+        {elektroinstrumentItems.map(({imgSrc, title, slug }, index) => (
           <RmontCard
             key={index}
             imgSrc={imgSrc}

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { CustomLayout } from "@/components/CustomLayout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { collections } from "../collections";
 import { notFound } from "next/navigation";
+import { collections } from "@/app/data/collections";
 
 
 type RmontTwoColProps = {
@@ -72,7 +72,7 @@ const RmontTwoCol: React.FC<RmontTwoColProps> = ({
 
 
 type Tool = {
-  href: string;
+  slug: string;
   imgSrc: string;
   title: string;
   pricePerHour: string;
@@ -91,7 +91,7 @@ export default async function OrendaElektroinstrymentiv({
   const normalize = (s: string) => s.toLowerCase().replace(/^\/+|\/+$/g, "");
 
   const found = collections.find((item: Tool) => {
-    const hrefLast = (normalize(item.href) || "").split("/").at(-1) || "";
+    const hrefLast = (normalize(item.slug) || "").split("/").at(-1) || "";
     return hrefLast === normalize(slug);
   });
 

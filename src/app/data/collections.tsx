@@ -4,7 +4,7 @@ export const collections = [
   {
     imgSrc: "/1.gif",
     title: "Шурупокрут Bosch GSR 1800-Li",
-    href: "/dla-betonuh-robit/bosch-gsr-1800-li",
+    slug: "bosch-gsr-1800-li",
     pricePerHour: "50",
     pricePerDay: "150",
     deposit: "700",
@@ -13,7 +13,7 @@ export const collections = [
   {
     imgSrc: "/2.gif",
     title: "Шурупокрут Bosch GSB 18-36 V-Li",
-    href: "/dla-betonuh-robit/bosch-gsb-18-36-v-li",
+    slug: "bosch-gsb-18-36-v-li",
     pricePerHour: "50",
     pricePerDay: "150",
     deposit: "700",
@@ -22,7 +22,7 @@ export const collections = [
   {
     imgSrc: "/3.gif",
     title: "Гайкокрут Bosch GDX 18 V-EC",
-    href: "/dla-betonuh-robit/bosch-gdx-18-v-ec",
+    slug: "bosch-gdx-18-v-ec",
     pricePerHour: "50",
     pricePerDay: "150",
     deposit: "700",
@@ -31,7 +31,7 @@ export const collections = [
   {
     imgSrc: "/4.gif",
     title: "Вібратор для бетону 1 м або 1,5 м",
-    href: "/dla-betonuh-robit/vibrator-dlya-betonu-1m-1-5m",
+    slug: "vibrator-dlya-betonu-1m-1-5m",
     pricePerHour: "50",
     pricePerDay: "150",
     deposit: "700",
@@ -40,7 +40,7 @@ export const collections = [
   {
     imgSrc: "/5.gif",
     title: "Вібратор для бетону 4,5 м",
-    href: "/dla-betonuh-robit/vibrator-dlya-betonu-4-5m",
+    slug: "vibrator-dlya-betonu-4-5m",
     pricePerHour: "50",
     pricePerDay: "150",
     deposit: "700",
@@ -49,7 +49,7 @@ export const collections = [
     {
     imgSrc: "/6.gif",
     title: "Віброплита 75 — 90 кг",
-    href: "/dla-betonuh-robit/vibrating-plate-75-90-kg",
+    slug: "vibrating-plate-75-90-kg",
     pricePerHour: "100",
     pricePerDay: "350",
     deposit: "1500",
@@ -58,7 +58,7 @@ export const collections = [
     {
     imgSrc: "/7.gif",
     title: "Віброплита 120 кг",
-    href: "/dla-betonuh-robit/vibrating-plate-120-kg",
+    slug: "vibrating-plate-120-kg",
     pricePerHour: "120",
     pricePerDay: "450",
     deposit: "2500",
