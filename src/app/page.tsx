@@ -7,7 +7,6 @@ import { Map } from '../components/Map';
 import { CustomLayout } from '../components/CustomLayout';
 import { ProcatPoslugi } from '@/components/ProcatPoslugi';
 import { RemontDviguniv } from '@/components/RemontDviguniv';
-
 export default function Home() {
   return (
     <CustomLayout>
@@ -21,5 +20,6 @@ export default function Home() {
       <Questions />
       <Map />
     </CustomLayout>
+   
   );
 }
