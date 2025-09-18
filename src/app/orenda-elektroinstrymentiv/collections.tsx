@@ -8,7 +8,7 @@ export const collections = [
     deposit: "700",
   },
   {
-    imgSrc: "/3.gif",
+    imgSrc: "/2.gif",
     title: "Шурупокрут Bosch GSB 18-36 V-Li",
     href: "/orenda-elektroinstrymentiv/bosch-gsb-18-36-v-li",
     pricePerHour: "50",
@@ -16,7 +16,7 @@ export const collections = [
     deposit: "700",
   },
   {
-    imgSrc: "/4.gif",
+    imgSrc: "/3.gif",
     title: "Гайкокрут Bosch GDX 18 V-EC",
     href: "/orenda-elektroinstrymentiv/bosch-gdx-18-v-ec",
     pricePerHour: "50",
@@ -24,7 +24,7 @@ export const collections = [
     deposit: "700",
   },
   {
-    imgSrc: "/5.gif",
+    imgSrc: "/4.gif",
     title: "Вібратор для бетону 1 м або 1,5 м",
     href: "/orenda-elektroinstrymentiv/vibrator-dlya-betonu-1m-1-5m",
     pricePerHour: "50",
@@ -32,12 +32,28 @@ export const collections = [
     deposit: "700",
   },
   {
-    imgSrc: "/6.gif",
+    imgSrc: "/5.gif",
     title: "Вібратор для бетону 4,5 м",
     href: "/orenda-elektroinstrymentiv/vibrator-dlya-betonu-4-5m",
     pricePerHour: "50",
     pricePerDay: "150",
     deposit: "700",
+  },
+    {
+    imgSrc: "/6.gif",
+    title: "Віброплита 75 — 90 кг",
+    href: "/orenda-elektroinstrymentiv/vibrating-plate-75-90-kg",
+    pricePerHour: "100",
+    pricePerDay: "350",
+    deposit: "1500",
+  },
+    {
+    imgSrc: "/7.gif",
+    title: "Віброплита 120 кг",
+    href: "/orenda-elektroinstrymentiv/vibrating-plate-120-kg",
+    pricePerHour: "120",
+    pricePerDay: "450",
+    deposit: "2500",
   },
 ];
 
