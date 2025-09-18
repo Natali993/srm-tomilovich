@@ -1,0 +1,68 @@
+import { TOOL_TYPE } from "@/components/toolTypes";
+
+export const collections = [
+  {
+    imgSrc: "/1.gif",
+    title: "Шурупокрут Bosch GSR 1800-Li",
+    href: "/elektroinstrument/bosch-gsr-1800-li",
+    pricePerHour: "50",
+    pricePerDay: "150",
+    deposit: "700",
+    type: TOOL_TYPE.ELECTRO,
+  },
+  {
+    imgSrc: "/2.gif",
+    title: "Шурупокрут Bosch GSB 18-36 V-Li",
+    href: "/elektroinstrument/bosch-gsb-18-36-v-li",
+    pricePerHour: "50",
+    pricePerDay: "150",
+    deposit: "700",
+    type: TOOL_TYPE.ELECTRO,
+  },
+  {
+    imgSrc: "/3.gif",
+    title: "Гайкокрут Bosch GDX 18 V-EC",
+    href: "/elektroinstrument/bosch-gdx-18-v-ec",
+    pricePerHour: "50",
+    pricePerDay: "150",
+    deposit: "700",
+    type: TOOL_TYPE.ELECTRO,
+  },
+  {
+    imgSrc: "/4.gif",
+    title: "Вібратор для бетону 1 м або 1,5 м",
+    href: "/elektroinstrument/vibrator-dlya-betonu-1m-1-5m",
+    pricePerHour: "50",
+    pricePerDay: "150",
+    deposit: "700",
+    type: TOOL_TYPE.BETON,
+  },
+  {
+    imgSrc: "/5.gif",
+    title: "Вібратор для бетону 4,5 м",
+    href: "/elektroinstrument/vibrator-dlya-betonu-4-5m",
+    pricePerHour: "50",
+    pricePerDay: "150",
+    deposit: "700",
+    type: TOOL_TYPE.BETON,
+  },
+    {
+    imgSrc: "/6.gif",
+    title: "Віброплита 75 — 90 кг",
+    href: "/elektroinstrument/vibrating-plate-75-90-kg",
+    pricePerHour: "100",
+    pricePerDay: "350",
+    deposit: "1500",
+    type: TOOL_TYPE.VIBROPLYTU,
+  },
+    {
+    imgSrc: "/7.gif",
+    title: "Віброплита 120 кг",
+    href: "/elektroinstrument/vibrating-plate-120-kg",
+    pricePerHour: "120",
+    pricePerDay: "450",
+    deposit: "2500",
+    type: TOOL_TYPE.VIBROPLYTU,
+  },
+];
+
