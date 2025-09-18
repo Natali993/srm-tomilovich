@@ -1,11 +1,9 @@
 import { CustomLayout } from "@/components/CustomLayout";
-
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 export default function Procat() {
   return (
     <CustomLayout>
-      <div className="flex bg-white flex-col min-h-screen font-sans text-gray-700">
-        Прокат
-      </div>
+      <Breadcrumbs title="Прокат" />
     </CustomLayout>
   );
 }
