@@ -39,7 +39,7 @@ type RmontCardProps = {
 
       {/* Заголовок */}
       <div className="mt-4">
-        <h3 className="font-sans min-h-[90px] text-2xl font-bold leading-tight text-black">
+        <h3 className="font-sans min-h-[90px] text-xl font-bold leading-tight text-black">
           {title}
         </h3>
       </div>

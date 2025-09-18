@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { CustomTitle } from './Title';
+import { RmontCard } from './RmontCard';
 
 export const Instruments = () => {
   const categories = [
@@ -75,26 +76,14 @@ export const Instruments = () => {
       <CustomTitle>
         Інструмент в ПРОКАТ
       </CustomTitle>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {categories.map((category, index) => (
-          <div key={index} className="flex flex-col items-center text-center">
-            <div className="relative w-full overflow-hidden rounded-lg shadow-lg">
-              <Image
-                src={category.imageSrc}
-                alt={category.altText}
-                width={category.imageWidth}
-                height={category.imageHeight}
-                sizes="(max-width: 390px) 100vw, 390px"
-                className="transition-transform duration-500 hover:scale-105"
-              />
-            </div>
-            <h3 className="text-xl font-bold mt-4 mb-2 text-black">
-              {category.name}
-            </h3>
-            <Link href={category.href} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded transition-colors duration-300">
-              ДЕТАЛЬНІШЕ
-            </Link>
-          </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        {categories.map(({ name, imageSrc, imageWidth, imageHeight, altText, href }, index) => (
+          <RmontCard
+            key={index}
+            imgSrc={imageSrc}
+            title={name}
+            href={href}
+          />
         ))}
       </div>
     </div>
