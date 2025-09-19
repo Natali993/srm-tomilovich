@@ -395,7 +395,7 @@ export const collections = [
     pricePerHour: "65",
     pricePerDay: "250",
     deposit: "1500",
-    type: TOOL_TYPE.BENZYN_GENERATOR,
+    type: TOOL_TYPE,
   },
   {
     imgSrc: "/45.png",
@@ -404,7 +404,7 @@ export const collections = [
     pricePerHour: "65",
     pricePerDay: "250",
     deposit: "1500",
-    type: TOOL_TYPE.BENZYN_GENERATOR,
+    type: TOOL_TYPE,
   },
   {
     imgSrc: "/46.png",
@@ -557,7 +557,7 @@ export const collections = [
     pricePerHour: "65",
     pricePerDay: "250",
     deposit: "700",
-    type: TOOL_TYPE.ELECTRO,
+    type: TOOL_TYPE,
   },
   {
     imgSrc: "/63.png",
@@ -566,7 +566,7 @@ export const collections = [
     pricePerHour: "100",
     pricePerDay: "400",
     deposit: "2500",
-    type: TOOL_TYPE.ELECTRO,
+    type: TOOL_TYPE,
   },
     {
     imgSrc: "/64.png",
@@ -639,7 +639,7 @@ export const collections = [
     pricePerHour: "65",
     pricePerDay: "250",
     deposit: "700",
-    type: TOOL_TYPE.ELECTRO,
+    type: TOOL_TYPE,
   },
   {
     imgSrc: "/72.png",
