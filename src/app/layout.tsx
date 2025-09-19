@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Solis Medical Center",
-  description: "Медичний центр Solis - лікування залежностей",
+  title: "Techprokat",
+  description: "Прокат техніки в Рівному",
 };
 
 export default function RootLayout({
