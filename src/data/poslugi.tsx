@@ -1,28 +1,28 @@
 const poslugi = [
   {
     title: "ПОСЛУГИ БКМ",
-    imgSrc: "/poslugi-bkm.png",
+    imgSrc: "/poslugi-bkm.webp",
     imgAlt: "Вантажівка БКМ",
     href: "/poslugy-bkm",
     pricePerHour: "600",
   },
   {
     title: "ПОСЛУГИ БКМ",
-    imgSrc: "/poslugi-bkm.png",
+    imgSrc: "/poslugi-bkm.webp",
     imgAlt: "Вантажівка БКМ",
     href: "/poslugy-bkm",
     pricePerHour: "600",
   },
   {
     title: "ПОСЛУГИ БКМ",
-    imgSrc: "/poslugi-bkm.png",
+    imgSrc: "/poslugi-bkm.webp",
     imgAlt: "Вантажівка БКМ",
     href: "/poslugy-bkm",
     pricePerHour: "600",
   },
   {
     title: "ПОСЛУГИ БКМ",
-    imgSrc: "/poslugi-bkm.png",
+    imgSrc: "/poslugi-bkm.webp",
     imgAlt: "Вантажівка БКМ",
     href: "/poslugy-bkm",
     pricePerHour: "600",
