@@ -11,7 +11,7 @@ export default function SadovuiInstrument() {
   const elektroinstrumentItems = collections.filter(item => item.type === TOOL_TYPE.SADOVIY_INSTRUMENT);
 
   return (
-    <CustomLayout breadcrumbs={()=><Breadcrumbs title="Садовий інструмент" />} >
+    <CustomLayout breadcrumbs={<Breadcrumbs title="Садовий інструмент" />} >
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
         {elektroinstrumentItems.map(({imgSrc, title, slug }, index) => (
           <RmontCard

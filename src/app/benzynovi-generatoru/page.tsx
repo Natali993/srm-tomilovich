@@ -11,7 +11,7 @@ export default function BenzynoviGeneratoru() {
   const elektroinstrumentItems = collections.filter(item => item.type === TOOL_TYPE.BENZYN_GENERATOR);
 
   return (
-    <CustomLayout breadcrumbs={()=><Breadcrumbs title="Бензинові генератори" />} >
+    <CustomLayout breadcrumbs={<Breadcrumbs title="Бензинові генератори" />} >
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
         {elektroinstrumentItems.map(({imgSrc, title, slug }, index) => (
           <RmontCard

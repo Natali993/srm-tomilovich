@@ -100,7 +100,7 @@ export default async function OrendaElektroinstrymentiv({
   const { imgSrc, title, pricePerHour, pricePerDay, deposit } = found;
 
   return (
-    <CustomLayout breadcrumbs={() => <Breadcrumbs title={title} fromTitle="Перфоратори Bosch" fromUrl="/pervorator-bosch"  />}>
+    <CustomLayout breadcrumbs={<Breadcrumbs title={title} fromTitle="Перфоратори Bosch" fromUrl="/pervorator-bosch"  />}>
       <RmontTwoCol
         imgSrc={imgSrc}
         title={title}

@@ -99,7 +99,7 @@ export default async function DlaBetonuhRobit({
   const { imgSrc, title, pricePerHour, pricePerDay, deposit } = found;
 
   return (
-    <CustomLayout breadcrumbs={() => <Breadcrumbs title={title} fromTitle="Для бетонних робіт" fromUrl="/dla-betonuh-robit"  />}>
+    <CustomLayout breadcrumbs={<Breadcrumbs title={title} fromTitle="Для бетонних робіт" fromUrl="/dla-betonuh-robit"  />}>
       <RmontTwoCol
         imgSrc={imgSrc}
         title={title}

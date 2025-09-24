@@ -99,7 +99,7 @@ export default async function VidbiynMolotku({
   const { imgSrc, title, pricePerHour, pricePerDay, deposit } = found;
 
   return (
-    <CustomLayout breadcrumbs={() => <Breadcrumbs title={title} fromTitle="Відбійники молотки" fromUrl="/vidbiuni-molotku"  />}>
+    <CustomLayout breadcrumbs={<Breadcrumbs title={title} fromTitle="Відбійники молотки" fromUrl="/vidbiuni-molotku"  />}>
       <RmontTwoCol
         imgSrc={imgSrc}
         title={title}

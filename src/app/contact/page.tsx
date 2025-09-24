@@ -2,7 +2,7 @@ import { CustomLayout } from "@/components/CustomLayout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 export default function Contact() {
   return (
-    <CustomLayout breadcrumbs={()=><Breadcrumbs title="Контакти" />} >
+    <CustomLayout breadcrumbs={<Breadcrumbs title="Контакти" />} >
       <div className="max-w-7xl mx-auto px-4">
         <div className="py-12">
           <h2 className="text-3xl font-bold mb-4">Контакти</h2>

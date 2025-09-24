@@ -3,7 +3,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export default function About() {
   return (
-    <CustomLayout breadcrumbs={()=><Breadcrumbs title="Про нас" />} >
+    <CustomLayout breadcrumbs={<Breadcrumbs title="Про нас" />} >
       <div className="max-w-7xl mx-auto px-4">
         <div className="py-12">
           <h2 className="text-3xl font-bold mb-4">Про нас</h2>
