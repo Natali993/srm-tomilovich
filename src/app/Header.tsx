@@ -9,6 +9,9 @@ const useScrollDirection = () => {
   const [isScrollingUp, setIsScrollingUp] = useState(false);
 
   useEffect(() => {
+    // Check if we're in the browser environment
+    if (typeof window === 'undefined') return;
+
     let lastScrollY = window.scrollY;
 
     const updateScrollDirection = () => {

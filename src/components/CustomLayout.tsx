@@ -8,6 +8,9 @@ const useHeaderHeight = () => {
   const [headerHeight, setHeaderHeight] = useState(164); // Default height
 
   useEffect(() => {
+    // Check if we're in the browser environment
+    if (typeof window === 'undefined' || typeof document === 'undefined') return;
+
     const updateHeaderHeight = () => {
       const header = document.querySelector('header');
       if (header) {
