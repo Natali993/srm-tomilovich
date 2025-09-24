@@ -1,18 +1,50 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const Logo = () => {
+// Custom hook for scroll detection
+const useScrollDirection = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [isScrollingUp, setIsScrollingUp] = useState(false);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const updateScrollDirection = () => {
+      const currentScrollY = window.scrollY;
+      const direction = currentScrollY > lastScrollY ? "down" : "up";
+
+      if (direction !== (isScrollingUp ? "up" : "down")) {
+        setIsScrollingUp(direction === "up");
+      }
+
+      setScrollY(currentScrollY);
+      lastScrollY = currentScrollY > 0 ? currentScrollY : 0;
+    };
+
+    const onScroll = () => window.requestAnimationFrame(updateScrollDirection);
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [isScrollingUp]);
+
+  return { scrollY, isScrollingUp };
+};
+
+const Logo = ({ isCompact = false }: { isCompact?: boolean }) => {
   return (
     <Link href="/">
-      <Image
-        src="/picturesHeader/logo.png" // Make sure to place your logo in the public/images directory
-        alt="Logo"
-        width={150} // Adjust width as needed
-        height={50} // Adjust height as needed
-        objectFit="contain"
-      />
+      <div className="transition-all duration-300 ease-in-out">
+        <Image
+          src="/picturesHeader/logo.png" // Make sure to place your logo in the public/images directory
+          alt="Logo"
+          width={isCompact ? 80 : 150} // Adjust width as needed
+          height={isCompact ? 20 : 50} // Adjust height as needed
+          objectFit="contain"
+          className="transition-all duration-300 ease-in-out"
+        />
+      </div>
     </Link>
   );
 };
@@ -20,7 +52,7 @@ const Logo = () => {
 const NavigationMenu = () => {
   return (
     <nav>
-      <ul className="flex items-center space-x-8 text-gray-800">
+      <ul className="flex items-center font-bold space-x-8 text-gray-800">
         <li><Link href="/"><p className="hover:text-blue-600">Головна</p></Link></li>
         <li><Link href="/about"><p className="hover:text-blue-600">Про нас</p></Link></li>
         <li><Link href="/prokat"><p className="hover:text-blue-600">Прокат</p></Link></li>
@@ -32,11 +64,14 @@ const NavigationMenu = () => {
   );
 };
 
-const NavigationMenuMobile = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+const NavigationMenuMobile = ({ isOpen, onClose, headerHeight }: { isOpen: boolean; onClose: () => void; headerHeight: string }) => {
   return (
     <nav
-      className={`fixed top-[164px] left-0 w-full overflow-hidden bg-white z-50 transition-all duration-300 ease-in-out ${isOpen ? "h-max pb-8" : "h-0"}`}
-      style={{ boxShadow: isOpen ? "0 0 20px rgba(0,0,0,0.1)" : "none" }}
+      className={`fixed left-0 w-full overflow-hidden bg-white z-50 transition-all duration-300 ease-in-out ${isOpen ? "h-max pb-8" : "h-0"}`}
+      style={{
+        top: headerHeight,
+        boxShadow: isOpen ? "0 0 20px rgba(0,0,0,0.1)" : "none"
+      }}
     >
       <div className="flex justify-end p-4">
       </div>
@@ -52,9 +87,13 @@ const NavigationMenuMobile = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
   );
 };
 
-const Subheader = () => {
+const Subheader = ({ isVisible }: { isVisible: boolean }) => {
   return (
-    <div className="bg-[#1a3148] text-white  py-2">
+    <div
+      className={`bg-[#1a3148] text-white transition-all duration-700 ease-in-out overflow-hidden ${
+        isVisible ? 'py-2 opacity-100' : 'py-0 h-0'
+      }`}
+    >
       <div className="container mx-auto max-w-[1140px] px-4">
         <div className="flex items-center space-x-2 text-sm">
           {/* Phone Icon  need to add*/}
@@ -65,23 +104,35 @@ const Subheader = () => {
   );
 };
 
-const MainHeader = () => {
+const MainHeader = ({ isCompact }: { isCompact: boolean }) => {
   return (
     <div className="bg-white shadow-md">
-      <div className="container mx-auto flex justify-between items-center max-w-[1140px] py-4 px-4">
-        <Logo />
+      <div className={`container mx-auto flex justify-between items-center max-w-[1140px] px-4 transition-all duration-300 ease-in-out ${
+        isCompact ? 'py-2' : 'py-4'
+      }`}>
+        <Logo isCompact={isCompact} />
         <NavigationMenu />
       </div>
     </div>
   );
 };
-const MainHeaderMobile = () => {
+const MainHeaderMobile = ({ isCompact, shouldShowSubheader }: { isCompact: boolean; shouldShowSubheader: boolean }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Calculate dynamic header height based on subheader visibility and compact state
+  const getHeaderHeight = () => {
+    const subheaderHeight = shouldShowSubheader ? 36 : 0; // py-2 = 8px top + 8px bottom + text height ≈ 36px
+    const mainHeaderHeight = isCompact ? 64 : 80; // py-2 vs py-4 with logo
+    return `${subheaderHeight + mainHeaderHeight}px`;
+  };
+
   return (
     <div className="bg-white shadow-md">
-      <div className="container mx-auto flex justify-between items-center max-w-[1140px] py-4 px-4">
-        <Logo />
-        {menuOpen ? 
+      <div className={`container mx-auto flex justify-between items-center max-w-[1140px] px-4 transition-all duration-300 ease-in-out ${
+        isCompact ? 'py-2' : 'py-4'
+      }`}>
+        <Logo isCompact={isCompact} />
+        {menuOpen ?
         <button
           aria-label="Закрити меню"
           onClick={() => setMenuOpen(false)}
@@ -102,26 +153,38 @@ const MainHeaderMobile = () => {
           </svg>
         </button>}
       </div>
-      <NavigationMenuMobile isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
+      <NavigationMenuMobile
+        isOpen={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        headerHeight={getHeaderHeight()}
+      />
     </div>
   );
 };
 
 export const DesktopHeader = () => {
+  const { scrollY, isScrollingUp } = useScrollDirection();
+  const shouldShowSubheader = scrollY < 50 || isScrollingUp;
+  const isCompact = scrollY > 50;
+
   return (
     <header className="fixed hidden md:block top-0 left-0 w-full z-50">
-      <Subheader />
-      <MainHeader />
+      <Subheader isVisible={shouldShowSubheader} />
+      <MainHeader isCompact={isCompact} />
     </header>
   );
 };
 
 export const MobileHeader = () => {
+  const { scrollY, isScrollingUp } = useScrollDirection();
+  const shouldShowSubheader = scrollY < 30 || isScrollingUp; // More aggressive on mobile
+  const isCompact = scrollY > 30;
+
   return (
     <header className="fixed md:hidden top-0 left-0 w-full z-50">
-      <Subheader />
-      <MainHeaderMobile />
-    </header>         
+      <Subheader isVisible={shouldShowSubheader} />
+      <MainHeaderMobile isCompact={isCompact} shouldShowSubheader={shouldShowSubheader} />
+    </header>
   );
 };
 
